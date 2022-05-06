@@ -12,9 +12,12 @@ const Register = () => {
     Await keyword use for stop execution 
     till task response, we will use multiple 
     await calls in one async function.*/
-    async function registerUser(){
+    async function registerUser(event){
+        event.preventDefault()
+
         const response = await fetch('http://localhost:1337/api/register', {
             // send the data as application json type
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
