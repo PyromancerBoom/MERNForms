@@ -6,10 +6,10 @@ const User = new mongoose.Schema(
         email: {type: String, required: true, unique:true},
         // Unique implies no duplicate value for email
         password: {type: String, required: true},
-        phrase: {type: String, required: true},
+        // phrase: {type: String, required: true},
     },
     {
-        collection: 'user-data'
+        collection: 'userdata'
     }
 )
 

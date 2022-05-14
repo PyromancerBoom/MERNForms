@@ -22,11 +22,18 @@ const Register = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                name,
-                email,
-                password,
+                "name":name,
+                "email":email,
+                "password":password,
             }),
+            // body: JSON.stringify({
+            //     name,
+            //     email,
+            //     password,
+            // }),
         })
+
+      
 
         // convert to json
         const data = await response.json()
